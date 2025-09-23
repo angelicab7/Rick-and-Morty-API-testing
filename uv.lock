@@ -1,0 +1,8 @@
+version = 1
+revision = 3
+requires-python = ">=3.13.6"
+
+[[package]]
+name = "rick-and-morty-api-testing"
+version = "0.1.0"
+source = { virtual = "." }
