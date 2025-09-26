@@ -6,3 +6,4 @@ API Testing with Python Using the Rick and Morty Rest API.
 
 ## Resources:
 [Docs](https://rickandmortyapi.com/documentation/#introduction)
+[Requests Library](https://requests.readthedocs.io/en/latest/user/quickstart/#make-a-request)
