@@ -4,3 +4,4 @@ __pycache__
 .lock
 CACHEDIR.TAG
 allure-results
+allure-screenshots
