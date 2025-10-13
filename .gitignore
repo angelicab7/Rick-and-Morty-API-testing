@@ -3,5 +3,7 @@
 __pycache__
 .lock
 CACHEDIR.TAG
-allure-results
-allure-screenshots
+allure-results/
+allure-screenshots/
+visuals/current/
+visuals/diffs/

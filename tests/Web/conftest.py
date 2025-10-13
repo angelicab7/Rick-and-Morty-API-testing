@@ -2,8 +2,8 @@ import os
 import allure
 import pytest
 from pathlib import Path
-from playwright.sync_api import sync_playwright
-from playwright.sync_api import Page, expect
+from playwright.sync_api import sync_playwright, Page, expect, Locator
+from tests.Web.visual_utils import VisualRegression
 
 @pytest.hookimpl(tryfirst=True, hookwrapper=True)
 def pytest_runtest_makereport(item, call):
@@ -97,3 +97,10 @@ def pytest_bdd_after_scenario(request, feature, scenario):
         #    This applies the title to the current test result item.
         allure.dynamic.title(scenario_title)
         allure.dynamic.description(f"Feature: {feature.name}")
+
+@pytest.fixture(scope="function")
+def visual_regression(page: Page):
+    """
+    Provides a class to perform a visual regression tests within a BDD step.
+    """ 
+    yield VisualRegression(page)
