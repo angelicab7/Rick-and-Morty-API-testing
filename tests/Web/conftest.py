@@ -55,7 +55,7 @@ def pytest_runtest_makereport(item, call):
 @pytest.fixture(scope="session")
 def browser():
    with sync_playwright() as p:
-       browser = p.chromium.launch(headless=False)
+       browser = p.chromium.launch(headless=True)
        yield browser
        browser.close()
 
@@ -64,9 +64,10 @@ def browser():
 """
 @pytest.fixture(scope="session")
 def page(browser):
-   page = browser.new_page()
+   context = browser.new_context(record_video_dir="visuals/videos/", record_video_size={"width": 640, "height": 480})
+   page = context.new_page()
    yield page
-   page.close()
+   context.close()
    
 """
     Fixture to navigate to the webpage before each test.

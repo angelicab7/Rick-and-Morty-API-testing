@@ -6,7 +6,7 @@ from tests.Web.pages.characters_page import CharactersPage
 from tests.Web.visual_utils import VisualRegression
 
 @scenario('../features/visual_search.feature', 'Home Page Components')
-def test_verify_characters():
+def test_verify_home_page():
     pass
 
 @given('I am on the Rick and Morty web Page') 
@@ -18,4 +18,4 @@ def verify_home(page: Page):
 @then('The banner and fun facts section should be visually stable') 
 def check_banner_visuals(visual_regression: VisualRegression):
     with allure.step('The banner and fun facts section should be visually stable'):
-        visual_regression.check_full_page(screenshot_name='homepage_initial_header')
+        visual_regression.check_full_page(screenshot_name='homepage_header')

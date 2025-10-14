@@ -7,3 +7,5 @@ allure-results/
 allure-screenshots/
 visuals/current/
 visuals/diffs/
+visuals/videos/
+.DS_Store

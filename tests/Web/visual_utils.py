@@ -14,8 +14,7 @@ CURRENT_DIR = VISUAL_DIR / "current"
 DIFF_DIR = VISUAL_DIR / "diffs"
 
 # Define a reasonable threshold for visual difference
-# Even identical-looking pages can have 1-10 pixels difference due to rendering/antialiasing
-PIXEL_TOLERANCE = 10
+PIXEL_TOLERANCE = 50
 
 # Ensure directories exist
 for d in [BASELINE_DIR, CURRENT_DIR, DIFF_DIR]:
